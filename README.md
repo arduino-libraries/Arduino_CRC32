@@ -6,6 +6,10 @@ This Arduino library provides a simple interface to perform checkum calculations
 ## Usage
 
 ```C++
+#include <Arduino_CRC32.h>
+/* ... */
+Arduino_CRC32 crc32;
+/* ... */
 char const str[] = "Hello CRC32 ;)";
 uint32_t const crc32_res = crc32.calc((uint8_t const *)str, strlen(str));
 ```
