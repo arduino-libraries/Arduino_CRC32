@@ -1,0 +1,29 @@
+name: Compile Examples
+on: [push, pull_request]
+jobs:
+ build:
+   runs-on: ubuntu-latest
+
+   strategy:
+     matrix:
+       fqbn: [
+         "arduino:samd:mkr1000",
+         "arduino:samd:mkrzero",
+         "arduino:samd:mkrwifi1010",
+         "arduino:samd:mkrfox1200",
+         "arduino:samd:mkrwan1300",
+         "arduino:samd:mkrwan1310",
+         "arduino:samd:mkrgsm1400",
+         "arduino:samd:mkrnb1500",
+         "arduino:samd:mkrvidor4000",
+         "arduino:samd:arduino_zero_edbg",
+         "arduino:samd:nano_33_iot"
+       ]
+
+   steps:
+     - uses: actions/checkout@v1
+       with:
+         fetch-depth: 1
+     - uses: arduino/actions/libraries/compile-examples@master
+       with:
+         fqbn: ${{ matrix.fqbn }}
