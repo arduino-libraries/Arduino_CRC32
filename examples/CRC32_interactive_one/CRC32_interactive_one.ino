@@ -25,7 +25,7 @@ uint32_t g_guess=0;
 //global variable used for some operations
 uint32_t g_mul=1;
 /**************************************************************************************
- * SETUP/LOOP
+ * SETUP LOOP
  **************************************************************************************/
 
 //put at setup section the code to be executed once
@@ -50,12 +50,8 @@ void loop()
   if(Serial.available() > 0) {
       g_incomingByte = Serial.read();
        Serial.write(g_incomingByte);
-   //if pressed enter   
   if((int)g_incomingByte==13)
   {
-   /* Serial.println("guess:");
-    Serial.println(guess);*/
-    
     if(g_guess==g_crc32_res)
     {
       Serial.println("Congrutlations you guessed correct,Now we can tell you:CRC is used for error detection,");
