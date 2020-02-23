@@ -38,7 +38,7 @@ void setup()
   char const str[] = "Hi";
   g_crc32_res = g_crc32.calc((uint8_t const *)str, strlen(str));
 
-  Serial.println("Try to guess the word  and give us its CRC if you succeded we will tell you  what's the purpose of CRC,");
+  Serial.println("Try to guess the word  and give us its CRC if you succeeded we will tell you  what's the purpose of CRC,");
   Serial.println("the word is said when you meet someone and it begins with capital letter");
  Serial.println("HINT:You can use CRC32.ino to get CRC of your guessed word");
  //Serial.println(g_crc32_res);
@@ -56,8 +56,8 @@ void loop()
     {
       Serial.println("Congrutlations you guessed correct,Now we can tell you:CRC is used for error detection,");
       Serial.println("if two devices want to exchange information between themselves,");
-      Serial.println("sender will send message and CRC(say c1) calculated to reciever,");
-      Serial.println("at reciever :reciever will take message and recalculate CRC (say c2),");
+      Serial.println("sender will send message and CRC(say c1) calculated to receiver,");
+      Serial.println("at receiver :receiver will take message and recalculate CRC (say c2),");
       Serial.println("and then compare c1 with c2 if they are equal the message is correct"); 
       Serial.println("and no error happened during transimission");
 
