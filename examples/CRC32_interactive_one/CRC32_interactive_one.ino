@@ -1,9 +1,9 @@
 /* CRC32_interactive_one.ino
  * 
  * This sketch demonstrates when to use CRC checksum 
- * by playing a beuatiful game with you
+ * by playing a beautiful game with you
  * 
- * khaled ahmed abdelgalil
+ * khaled Ahmed
  */
 
 /**************************************************************************************
