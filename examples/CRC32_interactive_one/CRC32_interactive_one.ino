@@ -3,7 +3,7 @@
  * This sketch demonstrates when to use CRC checksum 
  * by playing a beautiful game with you
  * 
- * khaled Ahmed
+ * 
  */
 
 /**************************************************************************************
