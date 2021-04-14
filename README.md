@@ -2,6 +2,7 @@ Arduino_CRC32
 =============
 
 [![Check Arduino status](https://github.com/arduino-libraries/Arduino_CRC32/actions/workflows/check-arduino.yml/badge.svg)](https://github.com/arduino-libraries/Arduino_CRC32/actions/workflows/check-arduino.yml)
+[![Compile Examples status](https://github.com/arduino-libraries/Arduino_CRC32/actions/workflows/compile-examples.yml/badge.svg)](https://github.com/arduino-libraries/Arduino_CRC32/actions/workflows/compile-examples.yml)
 [![Spell Check status](https://github.com/arduino-libraries/Arduino_CRC32/actions/workflows/spell-check.yml/badge.svg)](https://github.com/arduino-libraries/Arduino_CRC32/actions/workflows/spell-check.yml)
 
 This Arduino library provides a simple interface to perform checksum calculations utilizing the CRC-32 algorithm. The C code for the CRC-32 algorithm was generated using [PyCRC](https://pycrc.org) with the predefined [crc-32 model](https://pycrc.org/models.html#crc-32).
