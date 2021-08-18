@@ -1,4 +1,3 @@
-#define CRC32_AVR_FLASH_TABLE // reduces my test to 6322/430, else 6328/1454
 /**
  * \file
  * Functions and types for CRC checks.

@@ -16,13 +16,13 @@
 #include "crc.h"     /* include the header file generated with pycrc */
 #include <stdlib.h>
 #include <stdint.h>
-#ifdef CRC32_AVR_FLASH_TABLE
+#ifdef ARDUINO_ARCH_AVR
 #include <avr/pgmspace.h>
 #endif
 /**
  * Static table used for the table_driven implementation.
  */
-#ifdef CRC32_AVR_FLASH_TABLE
+#ifdef ARDUINO_ARCH_AVR
 static const PROGMEM crc_t crc_table[256] = {
 #else
 static const crc_t crc_table[256] = {
@@ -69,7 +69,7 @@ crc_t crc_update(crc_t crc, const void *data, size_t data_len)
 
     while (data_len--) {
         tbl_idx = (crc ^ *d) & 0xff;
-#ifdef CRC32_AVR_FLASH_TABLE
+#ifdef ARDUINO_ARCH_AVR
         crc = (pgm_read_dword(crc_table + tbl_idx) ^ (crc >> 8)) & 0xffffffff;
 #else
         crc = (crc_table[tbl_idx] ^ (crc >> 8)) & 0xffffffff;
