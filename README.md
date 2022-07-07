@@ -1,3 +1,5 @@
+*Note: This library is no longer maintained by Arduino and has therefore been archived. If you are interested in maintaining it, please write an email to support@arduino.cc.*
+
 Arduino_CRC32
 =============
 
